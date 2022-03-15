@@ -16,7 +16,7 @@
 
 #SBATCH --mail-user=<ma5266@nyu.edu>
 #SBATCH --mail-type=ALL
-singularity exec --nv --bind scratch/ma5266/ --overlay scratch/ma5266/overlay-25GB-500K
+singularity singularity exec --nv --bind /scratch/ma5266 --overlay /scratch/ma5266/overlay-25GB-500K.ext3:ro /scratch/ma5266/cuda11.4.2-cudnn8.2.4-devel-ubuntu20.04.3.sif /bin/bash -c
 source /ext3/env.sh
 conda activate
 python /scratch/ma5266/run_hyperparameter_search.py data_dir=/scratch/ma5266
