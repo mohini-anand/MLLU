@@ -10,6 +10,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=20G
 #SBATCH -c 4
+#SBATCH --requeue
 
 ## TODO: Run your hyperparameter search in a singularity container. Remember to 
 ## activate your Conda environment in the container before running your Python script.
